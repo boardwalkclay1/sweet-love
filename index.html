@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For My Love</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Heart confetti canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Global galaxy background -->
+  <div class="galaxy-bg"></div>
+
+  <!-- SoundCloud playlist (replace src with your playlist embed URL) -->
+  <div class="soundcloud-wrapper">
+    <iframe
+      width="100%"
+      height="120"
+      scrolling="no"
+      frameborder="no"
+      allow="autoplay"
+      src="YOUR_SOUNDCLOUD_EMBED_URL_HERE">
+    </iframe>
+  </div>
+
+  <!-- Scene container -->
+  <div id="app">
+
+    <!-- Scene 1: Floating photos intro -->
+    <section class="scene scene-active" id="scene-1">
+      <div class="scene-content">
+        <h1 class="title">Happy Valentine’s Day</h1>
+        <p class="subtitle">For the love of my life.</p>
+
+        <div class="floating-photos">
+          <img src="assets/images/photo1.jpg" class="photo photo-1" />
+          <img src="assets/images/photo2.jpg" class="photo photo-2" />
+          <img src="assets/images/photo3.jpg" class="photo photo-3" />
+          <img src="assets/images/photo4.jpg" class="photo photo-4" />
+        </div>
+
+        <button class="btn next-btn" data-next="scene-2">
+          Continue
+        </button>
+      </div>
+    </section>
+
+    <!-- Scene 2: Love galaxy + message -->
+    <section class="scene" id="scene-2">
+      <div class="scene-content">
+        <h2>You are my universe</h2>
+        <p>
+          You are the best thing that ever happened to me.  
+          You rock my world, every single day.  
+          I appreciate how you’re there when I need you—more than words can say.
+        </p>
+
+        <div class="orbiting-media">
+          <!-- Add photos/videos here -->
+          <img src="assets/images/photo5.jpg" class="orbit orbit-1" />
+          <video class="orbit orbit-2" src="assets/videos/clip1.mp4" autoplay muted loop></video>
+        </div>
+
+        <button class="btn next-btn" data-next="scene-3">
+          One more thing…
+        </button>
+      </div>
+    </section>
+
+    <!-- Scene 3: Interactive clickables -->
+    <section class="scene" id="scene-3">
+      <div class="scene-content">
+        <h2>Tap the hearts</h2>
+        <p>Each heart holds a little piece of how I feel about you.</p>
+
+        <div class="heart-grid">
+          <button class="heart-card" data-message="You make every day brighter.">❤️</button>
+          <button class="heart-card" data-message="Your laugh is my favorite sound.">❤️</button>
+          <button class="heart-card" data-message="Thank you for always having my back.">❤️</button>
+          <button class="heart-card" data-message="I’m so proud to love you.">❤️</button>
+        </div>
+
+        <div class="heart-message" id="heart-message"></div>
+
+        <button class="btn next-btn" data-next="scene-4">
+          To the last page…
+        </button>
+      </div>
+    </section>
+
+    <!-- Scene 4: Swans + closing note -->
+    <section class="scene" id="scene-4">
+      <div class="scene-content swan-scene">
+        <div class="water"></div>
+        <img src="assets/images/swans.png" class="swans" />
+
+        <div class="closing-text">
+          <h2>Forever with you</h2>
+          <p>
+            Like swans that choose one partner for life,  
+            I choose you—again and again.  
+            Thank you for being my home, my peace, and my wildest dream.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
