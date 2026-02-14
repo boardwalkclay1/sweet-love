@@ -12,7 +12,21 @@
   <!-- Floating heart particles -->
   <canvas id="heart-canvas"></canvas>
 
-  <!-- GLOBAL SOUNDTRACK (plays across all scenes) -->
+  <!-- Floating full-screen photo galaxy -->
+  <div class="galaxy-photo-layer">
+    <img src="assets/images/photo1.jpg" class="bg-photo bg-1" />
+    <img src="assets/images/photo2.jpg" class="bg-photo bg-2" />
+    <img src="assets/images/photo3.jpg" class="bg-photo bg-3" />
+    <img src="assets/images/photo4.jpg" class="bg-photo bg-4" />
+    <img src="assets/images/photo5.jpg" class="bg-photo bg-5" />
+    <img src="assets/images/photo6.jpg" class="bg-photo bg-6" />
+    <img src="assets/images/photo7.jpg" class="bg-photo bg-7" />
+    <img src="assets/images/photo8.jpg" class="bg-photo bg-8" />
+    <img src="assets/images/photo9.jpg" class="bg-photo bg-9" />
+    <img src="assets/images/photo10.jpg" class="bg-photo bg-10" />
+  </div>
+
+  <!-- GLOBAL SOUNDTRACK -->
   <div class="soundcloud-wrapper">
     <iframe 
       width="100%" 
@@ -63,11 +77,199 @@
         </p>
 
         <div class="choice-grid fade-in delay-2">
-          <button class="choice-btn" data-next="past">⏳ Go Back in Time</button>
-          <button class="choice-btn" data-next="present">❤️ Stay in the Present</button>
-          <button class="choice-btn" data-next="future">🚀 Go to the Future</button>
+          <button class="choice-btn" data-next="past-1">⏳ Go Back in Time</button>
+          <button class="choice-btn" data-next="present-1">❤️ Stay in the Present</button>
+          <button class="choice-btn" data-next="future-1">🚀 Go to the Future</button>
         </div>
 
+      </div>
+    </section>
+
+    <!-- PAST 1 -->
+    <section class="scene" id="past-1">
+      <div class="scene-content story">
+        <h2>Back on the Beltline</h2>
+        <p>
+          I remember the sound of my wheels on the concrete,  
+          the hum of the city, the warmth of the sun.  
+          And then there you were—bending down, lacing up your roller skates,  
+          like the world had paused just to frame you in that moment.
+        </p>
+        <p>
+          I didn’t know your name.  
+          I just knew my heart had found something it didn’t want to forget.
+        </p>
+
+        <button class="heart-btn" data-next="past-2">💗 Click to hear the rest…</button>
+      </div>
+    </section>
+
+    <!-- PAST 2 -->
+    <section class="scene" id="past-2">
+      <div class="scene-content story">
+        <h2>Love at First Sight</h2>
+        <p>
+          As you stood up and rolled forward,  
+          I watched you glide like you’d always belonged there.  
+          I fell in love with you right then—before a word, before a hello.  
+          Just you, the sun, the skates, and my longboard heart trying to keep up.
+        </p>
+        <p>
+          When we parted ways that day,  
+          I honestly thought I’d never see you again.
+        </p>
+
+        <button class="heart-btn" data-next="past-3">💗 Click to hear the rest…</button>
+      </div>
+    </section>
+
+    <!-- PAST 3 -->
+    <section class="scene" id="past-3">
+      <div class="scene-content story">
+        <h2>Falling in Love Twice</h2>
+        <p>
+          Life moved on… or at least I thought it did.  
+          Then one day, I met you again—different place, different time.  
+          I had no idea you were the same girl from the Beltline.
+        </p>
+        <p>
+          And somehow, I fell in love with you all over again.  
+          That has never happened to me before—  
+          to fall in love with the same soul twice,  
+          without even knowing it was you both times.
+        </p>
+        <p>
+          Now, every time I see you,  
+          I fall in love with you again.  
+          Over and over. Like it’s the first time.
+        </p>
+
+        <button class="btn small-btn" data-next="scene-2">
+          ⬅ Back to Time Choices
+        </button>
+      </div>
+    </section>
+
+    <!-- PRESENT 1 -->
+    <section class="scene" id="present-1">
+      <div class="scene-content story">
+        <h2>Right Here, Right Now</h2>
+        <p>
+          Today, I’m just grateful.  
+          Grateful that somehow, the universe brought you back into my life.  
+          Grateful that the girl on skates became the woman I get to love.
+        </p>
+        <p>
+          You’re not just part of my life—you’re the heart of it.
+        </p>
+
+        <button class="heart-btn" data-next="present-2">💗 Click to hear the rest…</button>
+      </div>
+    </section>
+
+    <!-- PRESENT 2 -->
+    <section class="scene" id="present-2">
+      <div class="scene-content story">
+        <h2>My Anchor in the Storm</h2>
+        <p>
+          There were times I didn’t know how I was going to make it through.  
+          Times when everything felt heavy, dark, and impossible.
+        </p>
+        <p>
+          And you—  
+          you were the reason I got through some of the most difficult moments of my life.  
+          You made the weight lighter. You made the days softer.  
+          You made the pain bearable just by being there.
+        </p>
+
+        <button class="heart-btn" data-next="present-3">💗 Click to hear the rest…</button>
+      </div>
+    </section>
+
+    <!-- PRESENT 3 -->
+    <section class="scene" id="present-3">
+      <div class="scene-content story">
+        <h2>My Angel</h2>
+        <p>
+          You are an angel in my life.  
+          You turned struggle into growth,  
+          loneliness into partnership,  
+          and fear into something I could face with you by my side.
+        </p>
+        <p>
+          I love you more than I can ever fully say.  
+          And I am so, so grateful that I get to love you in this lifetime.
+        </p>
+
+        <button class="btn small-btn" data-next="scene-2">
+          ⬅ Back to Time Choices
+        </button>
+      </div>
+    </section>
+
+    <!-- FUTURE 1 -->
+    <section class="scene" id="future-1">
+      <div class="scene-content story">
+        <h2>Our Land, Our Freedom</h2>
+        <p>
+          When I think about our future,  
+          I see land—ours.  
+          I see us traveling wherever and whenever we want,  
+          moving through the world with ease, joy, and freedom.
+        </p>
+        <p>
+          All of it growing from that first moment on the Beltline,  
+          and every moment we’ve shared since.
+        </p>
+
+        <button class="heart-btn" data-next="future-2">💗 Click to hear the rest…</button>
+      </div>
+    </section>
+
+    <!-- FUTURE 2 -->
+    <section class="scene" id="future-2">
+      <div class="scene-content story">
+        <h2>Home in the Woods</h2>
+        <p>
+          I see us living in the woods, comfortably,  
+          surrounded by trees, sky, and quiet.  
+          Technology when we want it,  
+          nature when we need it,  
+          and love holding it all together.
+        </p>
+        <p>
+          Spiritual, clean, pure, grounded—  
+          with our ancestors watching over us, proud.
+        </p>
+
+        <button class="heart-btn" data-next="future-3">💗 Click to hear the rest…</button>
+      </div>
+    </section>
+
+    <!-- FUTURE 3 -->
+    <section class="scene" id="future-3">
+      <div class="scene-content story">
+        <h2>The House I’m Building for You</h2>
+        <p>
+          I’m building you a house—  
+          not just with wood and walls,  
+          but with intention, love, and every lesson we’ve lived.
+        </p>
+        <p>
+          One day we’ll sit on our land,  
+          look back at the Beltline, the present, the storms, the laughter—  
+          and know it was all worth it.  
+          Because it led me to you, and kept me with you.
+        </p>
+        <p>
+          I’m so glad I met you.  
+          I’m so glad I get to love you—  
+          in the past, in the present, and in every future we build.
+        </p>
+
+        <button class="btn small-btn" data-next="scene-2">
+          ⬅ Back to Time Choices
+        </button>
       </div>
     </section>
 
