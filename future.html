@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Future – The Life We Build</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-world="future">
+
+  <canvas id="heart-canvas"></canvas>
+
+  <div class="galaxy-photo-layer">
+    <img src="assets/images/photo1.jpg" class="bg-photo bg-1" />
+    <img src="assets/images/photo2.jpg" class="bg-photo bg-2" />
+    <img src="assets/images/photo3.jpg" class="bg-photo bg-3" />
+    <img src="assets/images/photo4.jpg" class="bg-photo bg-4" />
+    <img src="assets/images/photo5.jpg" class="bg-photo bg-5" />
+    <img src="assets/images/photo6.jpg" class="bg-photo bg-6" />
+    <img src="assets/images/photo7.jpg" class="bg-photo bg-7" />
+    <img src="assets/images/photo8.jpg" class="bg-photo bg-8" />
+    <img src="assets/images/photo9.jpg" class="bg-photo bg-9" />
+    <img src="assets/images/photo10.jpg" class="bg-photo bg-10" />
+  </div>
+
+  <div id="decor-layer"></div>
+
+  <div class="soundcloud-wrapper">
+    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2191519382&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+    </iframe>
+  </div>
+
+  <div id="app">
+
+    <section class="scene scene-active" id="future-1">
+      <div class="scene-content story">
+        <h2>Our Land</h2>
+        <p>
+          I see us owning land—ours.  
+          Waking up where the air is quiet and the sky feels close.
+        </p>
+
+        <button class="heart-btn" data-next="future-2">💗 Continue…</button>
+      </div>
+    </section>
+
+    <section class="scene" id="future-2">
+      <div class="scene-content story">
+        <h2>Our Peace</h2>
+        <p>
+          I see us living in the woods, comfortably,  
+          surrounded by trees, sky, and quiet.
+        </p>
+
+        <button class="heart-btn" data-next="future-3">💗 Continue…</button>
+      </div>
+    </section>
+
+    <section class="scene" id="future-3">
+      <div class="scene-content story final-past">
+        <h2>The House I’m Building for You</h2>
+        <p class="glow-text">
+          I’m building you a home—  
+          not just with wood and walls,  
+          but with intention, love, and every lesson we’ve lived.
+        </p>
+
+        <div class="final-buttons">
+          <a href="index.html" class="btn small-btn">⬅ Back</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
