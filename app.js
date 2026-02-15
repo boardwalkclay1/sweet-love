@@ -1,80 +1,90 @@
 // Scene switching
 const scenes = document.querySelectorAll(".scene");
 const nextButtons = document.querySelectorAll(".next-btn");
+const choiceButtons = document.querySelectorAll(".choice-btn");
+const heartButtons = document.querySelectorAll(".heart-btn");
+const smallNavButtons = document.querySelectorAll(".small-btn");
+const bgPhotos = document.querySelectorAll(".bg-photo");
 
-nextButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const nextId = btn.dataset.next;
-    if (!nextId) return;
-    scenes.forEach(s => s.classList.remove("scene-active"));
-    document.getElementById(nextId).classList.add("scene-active");
-  });
-});
+function setWorldBackground(world) {
+  // Clear all active photos
+  bgPhotos.forEach(p => p.classList.remove("bg-active"));
 
-// Scene 1: staggered floating photos (in, slow, then fall back)
-const photos = document.querySelectorAll(".floating-photos .photo");
-
-function animateIntroPhotos() {
-  photos.forEach((photo, index) => {
-    const delay = index * 800;
-
-    setTimeout(() => {
-      photo.style.transition = "transform 1.6s ease-out, opacity 1.6s ease-out";
-      photo.style.opacity = "1";
-      photo.style.transform = "translateY(0) scale(1)";
-    }, delay);
-
-    // After they slow down, fall backwards (scale down + fade)
-    setTimeout(() => {
-      photo.style.transition = "transform 2.2s ease-in, opacity 2.2s ease-in";
-      photo.style.transform = "translateY(40px) scale(0.7)";
-      photo.style.opacity = "0.2";
-    }, delay + 2200);
-  });
+  if (world === "past") {
+    // photos 1–3
+    document.querySelector(".bg-1")?.classList.add("bg-active");
+    document.querySelector(".bg-2")?.classList.add("bg-active");
+    document.querySelector(".bg-3")?.classList.add("bg-active");
+  } else if (world === "present") {
+    // photos 4–7
+    document.querySelector(".bg-4")?.classList.add("bg-active");
+    document.querySelector(".bg-5")?.classList.add("bg-active");
+    document.querySelector(".bg-6")?.classList.add("bg-active");
+    document.querySelector(".bg-7")?.classList.add("bg-active");
+  } else if (world === "future") {
+    // photos 8–10
+    document.querySelector(".bg-8")?.classList.add("bg-active");
+    document.querySelector(".bg-9")?.classList.add("bg-active");
+    document.querySelector(".bg-10")?.classList.add("bg-active");
+  } else {
+    // intro / choice: all softly on
+    bgPhotos.forEach(p => p.classList.add("bg-active"));
+  }
 }
 
-animateIntroPhotos();
+function goToScene(id) {
+  scenes.forEach(s => s.classList.remove("scene-active"));
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.add("scene-active");
+    const world = target.dataset.world || "intro";
+    setWorldBackground(world);
+  }
+}
 
-// Scene 3: heart click messages
-const heartCards = document.querySelectorAll(".heart-card");
-const heartMessage = document.getElementById("heart-message");
-
-heartCards.forEach(card => {
-  card.addEventListener("click", () => {
-    const msg = card.dataset.message;
-    heartMessage.textContent = msg;
-  });
+nextButtons.forEach(btn => {
+  btn.addEventListener("click", () => goToScene(btn.dataset.next));
 });
 
-// Simple heart confetti
-const canvas = document.getElementById("confetti-canvas");
-const ctx = canvas.getContext("2d");
-let hearts = [];
-let width, height;
+choiceButtons.forEach(btn => {
+  btn.addEventListener("click", () => goToScene(btn.dataset.next));
+});
 
-function resizeCanvas() {
+heartButtons.forEach(btn => {
+  btn.addEventListener("click", () => goToScene(btn.dataset.next));
+});
+
+smallNavButtons.forEach(btn => {
+  btn.addEventListener("click", () => goToScene(btn.dataset.next));
+});
+
+// Heart particle animation (unchanged)
+const canvas = document.getElementById("heart-canvas");
+const ctx = canvas.getContext("2d");
+
+let width, height;
+function resize() {
   width = canvas.width = window.innerWidth;
   height = canvas.height = window.innerHeight;
 }
-window.addEventListener("resize", resizeCanvas);
-resizeCanvas();
+resize();
+window.addEventListener("resize", resize);
 
+let hearts = [];
 function createHeart() {
   return {
     x: Math.random() * width,
-    y: -20,
-    size: 8 + Math.random() * 10,
-    speedY: 1 + Math.random() * 2,
+    y: Math.random() * height,
+    size: 6 + Math.random() * 10,
+    speed: 0.3 + Math.random() * 0.7,
     wobble: Math.random() * 2,
     wobbleSpeed: 0.02 + Math.random() * 0.04,
     wobbleOffset: Math.random() * Math.PI * 2,
-    color: Math.random() > 0.5 ? "#ff7ac4" : "#ffb6c1"
+    color: Math.random() > 0.5 ? "#ff9a9e" : "#fecfef"
   };
 }
 
-for (let i = 0; i < 80; i++) {
-  hearts.push(createHeart());
-}
+for (let i = 0; i < 80; i++) hearts.push(createHeart());
 
 function drawHeart(x, y, size, color) {
   ctx.save();
@@ -90,20 +100,24 @@ function drawHeart(x, y, size, color) {
   ctx.restore();
 }
 
-function confettiLoop() {
+function loop() {
   ctx.clearRect(0, 0, width, height);
 
   hearts.forEach(h => {
-    h.y += h.speedY;
+    h.y -= h.speed;
     h.wobbleOffset += h.wobbleSpeed;
     const wobbleX = Math.sin(h.wobbleOffset) * h.wobble * 10;
+
     drawHeart(h.x + wobbleX, h.y, h.size, h.color);
 
-    if (h.y - h.size > height) {
-      Object.assign(h, createHeart(), { y: -20 });
+    if (h.y + h.size < 0) {
+      Object.assign(h, createHeart(), { y: height + 20 });
     }
   });
 
-  requestAnimationFrame(confettiLoop);
+  requestAnimationFrame(loop);
 }
-confettiLoop();
+loop();
+
+// Initial background for intro
+setWorldBackground("intro");
