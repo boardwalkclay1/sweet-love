@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Present – My Angel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-world="present">
+
+  <canvas id="heart-canvas"></canvas>
+
+  <div class="galaxy-photo-layer">
+    <img src="assets/images/photo1.jpg" class="bg-photo bg-1" />
+    <img src="assets/images/photo2.jpg" class="bg-photo bg-2" />
+    <img src="assets/images/photo3.jpg" class="bg-photo bg-3" />
+    <img src="assets/images/photo4.jpg" class="bg-photo bg-4" />
+    <img src="assets/images/photo5.jpg" class="bg-photo bg-5" />
+    <img src="assets/images/photo6.jpg" class="bg-photo bg-6" />
+    <img src="assets/images/photo7.jpg" class="bg-photo bg-7" />
+    <img src="assets/images/photo8.jpg" class="bg-photo bg-8" />
+    <img src="assets/images/photo9.jpg" class="bg-photo bg-9" />
+    <img src="assets/images/photo10.jpg" class="bg-photo bg-10" />
+  </div>
+
+  <div id="decor-layer"></div>
+
+  <div class="soundcloud-wrapper">
+    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2191519382&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+    </iframe>
+  </div>
+
+  <div id="app">
+
+    <section class="scene scene-active" id="present-1">
+      <div class="scene-content story">
+        <h2>Right Here, Right Now</h2>
+        <p>
+          Today, I’m grateful.  
+          Grateful that the girl on skates became the woman I lean on, laugh with, dream with.
+        </p>
+        <p>
+          You’re not just in my life—you’re the center of it.
+        </p>
+
+        <button class="heart-btn" data-next="present-2">💗 Continue…</button>
+      </div>
+    </section>
+
+    <section class="scene" id="present-2">
+      <div class="scene-content story">
+        <h2>My Anchor</h2>
+        <p>
+          You helped me through some of the hardest moments of my life.  
+          You didn’t just stand beside me—you held me up.
+        </p>
+
+        <button class="heart-btn" data-next="present-3">💗 Continue…</button>
+      </div>
+    </section>
+
+    <section class="scene" id="present-3">
+      <div class="scene-content story final-past">
+        <h2>My Angel</h2>
+        <p class="glow-text">
+          You turned struggle into growth,  
+          loneliness into partnership,  
+          and fear into something I could face with you beside me.
+        </p>
+
+        <div class="final-buttons">
+          <a href="index.html" class="btn small-btn">⬅ Back</a>
+          <a href="future.html" class="btn small-btn">🌙 Future</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
