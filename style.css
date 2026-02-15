@@ -270,3 +270,13 @@ body {
   gap: 18px;
   margin-top: 24px;
 }
+.soundcloud-wrapper {
+  position: fixed;
+  bottom: -260px; /* off-screen but still visible to browser */
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(600px, 90vw);
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 1; /* MUST be 1 or SoundCloud will NOT load */
+}
