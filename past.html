@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Past – Beltline Love</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-world="past">
+
+  <canvas id="heart-canvas"></canvas>
+
+  <!-- All 10 photos in the galaxy for story pages -->
+  <div class="galaxy-photo-layer">
+    <img src="assets/images/photo1.jpg" class="bg-photo bg-1" />
+    <img src="assets/images/photo2.jpg" class="bg-photo bg-2" />
+    <img src="assets/images/photo3.jpg" class="bg-photo bg-3" />
+    <img src="assets/images/photo4.jpg" class="bg-photo bg-4" />
+    <img src="assets/images/photo5.jpg" class="bg-photo bg-5" />
+    <img src="assets/images/photo6.jpg" class="bg-photo bg-6" />
+    <img src="assets/images/photo7.jpg" class="bg-photo bg-7" />
+    <img src="assets/images/photo8.jpg" class="bg-photo bg-8" />
+    <img src="assets/images/photo9.jpg" class="bg-photo bg-9" />
+    <img src="assets/images/photo10.jpg" class="bg-photo bg-10" />
+  </div>
+
+  <div id="decor-layer"></div>
+
+  <div class="soundcloud-wrapper">
+    <iframe 
+      width="100%" 
+      height="300" 
+      scrolling="no" 
+      frameborder="no" 
+      allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2191519382&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+    </iframe>
+  </div>
+
+  <div id="app">
+
+    <!-- PAST PAGE 1 -->
+    <section class="scene scene-active" id="past-1">
+      <div class="scene-content story">
+        <h2>Back on the Beltline</h2>
+        <p>
+          The day was warm, the sky was soft, and the Beltline felt like a movie set.  
+          I was gliding on my longboard, just another day, just another ride…
+        </p>
+        <p>
+          And then I saw you—kneeling to lace up your roller skates.  
+          The world didn’t just slow down, it <em>stopped</em>.  
+          It was like the universe said, “Look. Remember this.”
+        </p>
+
+        <button class="heart-btn" data-next="past-2">💗 Click to hear the rest…</button>
+      </div>
+    </section>
+
+    <!-- PAST PAGE 2 -->
+    <section class="scene" id="past-2">
+      <div class="scene-content story">
+        <h2>Love at First Sight</h2>
+        <p>
+          You stood up and started rolling, and I swear, you didn’t just move—you floated.  
+          The sun hit your face, your hair, your smile, and I felt something in my chest shift.
+        </p>
+        <p>
+          I didn’t know your name. I didn’t know your story.  
+          But I knew this: I was looking at the most beautiful person I had ever seen.
+        </p>
+        <p>
+          When we went our separate ways that day,  
+          I honestly thought I’d never see you again.
+        </p>
+
+        <button class="heart-btn" data-next="past-3">💗 Click to hear the rest…</button>
+      </div>
+    </section>
+
+    <!-- PAST PAGE 3 (LAST PAGE WITH PINK AROUND WHITE WORDS) -->
+    <section class="scene" id="past-3">
+      <div class="scene-content story final-past">
+        <h2>Falling in Love Twice</h2>
+        <p>
+          Time passed. Life kept moving.  
+          And then one day, I met you again—different place, different moment, same soul.
+        </p>
+        <p>
+          I didn’t recognize you as the girl from the Beltline.  
+          I just knew that my heart was doing that same thing again—  
+          that quiet, stunned, “oh no, I’m falling” feeling.
+        </p>
+        <p class="glow-text">
+          I fell in love with you for the <span>second time</span>,  
+          without knowing you were the same girl I’d fallen for the first time.
+        </p>
+        <p class="glow-text">
+          Now, every time I see you,  
+          I fall in love with you <span>all over again</span>.
+        </p>
+
+        <div class="final-buttons">
+          <a href="index.html" class="btn small-btn">⬅ Back to Galaxy</a>
+          <a href="present.html" class="btn small-btn">❤️ Go to the Present</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
