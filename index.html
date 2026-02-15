@@ -1,198 +1,77 @@
-    <!-- PAST WORLD -->
-    <!-- PAST 1 -->
-    <section class="scene" id="past-1" data-world="past">
-      <div class="scene-content story">
-        <h2>Back on the Beltline</h2>
-        <p>
-          The day was warm, the sky was soft, and the Beltline felt like a movie set.  
-          I was gliding on my longboard, just another day, just another ride…
-        </p>
-        <p>
-          And then I saw you—kneeling to lace up your roller skates.  
-          The world didn’t just slow down, it <em>stopped</em>.  
-          It was like the universe said, “Look. Remember this.”
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Valentine Galaxy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-world="index">
+
+  <!-- Heart + decor particles -->
+  <canvas id="heart-canvas"></canvas>
+
+  <!-- Floating full-screen photo galaxy (index: photos 5–10 only) -->
+  <div class="galaxy-photo-layer">
+    <img src="assets/images/photo5.jpg" class="bg-photo bg-5" />
+    <img src="assets/images/photo6.jpg" class="bg-photo bg-6" />
+    <img src="assets/images/photo7.jpg" class="bg-photo bg-7" />
+    <img src="assets/images/photo8.jpg" class="bg-photo bg-8" />
+    <img src="assets/images/photo9.jpg" class="bg-photo bg-9" />
+    <img src="assets/images/photo10.jpg" class="bg-photo bg-10" />
+  </div>
+
+  <!-- Falling decor (flowers, teddy bears, candy) -->
+  <div id="decor-layer"></div>
+
+  <!-- GLOBAL SOUNDTRACK (hidden off-screen but playing) -->
+  <div class="soundcloud-wrapper">
+    <iframe 
+      width="100%" 
+      height="300" 
+      scrolling="no" 
+      frameborder="no" 
+      allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2191519382&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+    </iframe>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="app">
+
+    <section class="scene scene-active" id="scene-index">
+      <div class="scene-content intro">
+
+        <h1 class="title fade-in">Our Valentine Galaxy</h1>
+
+        <p class="fade-in delay-1">
+          Somewhere between my longboard wheels and your roller skates,  
+          the universe decided our hearts would orbit each other forever.
         </p>
 
-        <button class="heart-btn" data-next="past-2">💗 Click to hear the rest…</button>
+        <p class="fade-in delay-2">
+          This is our story—past, present, and future—  
+          floating in a pink and white galaxy made just for you.
+        </p>
+
+        <div class="choice-grid floating-buttons fade-in delay-3">
+          <a href="past.html" class="choice-btn float-bounce">
+            ⏳ Past
+          </a>
+          <a href="present.html" class="choice-btn float-bounce">
+            ❤️ Present
+          </a>
+          <a href="future.html" class="choice-btn float-bounce">
+            🌙 Future
+          </a>
+        </div>
+
       </div>
     </section>
 
-    <!-- PAST 2 -->
-    <section class="scene" id="past-2" data-world="past">
-      <div class="scene-content story">
-        <h2>Love at First Sight</h2>
-        <p>
-          You stood up and started rolling, and I swear, you didn’t just move—you floated.  
-          The sun hit your face, your hair, your smile, and I felt something in my chest shift.
-        </p>
-        <p>
-          I didn’t know your name. I didn’t know your story.  
-          But I knew this: I was looking at the most beautiful person I had ever seen.
-        </p>
-        <p>
-          When we went our separate ways that day,  
-          I honestly thought I’d never see you again.
-        </p>
+  </div>
 
-        <button class="heart-btn" data-next="past-3">💗 Click to hear the rest…</button>
-      </div>
-    </section>
-
-    <!-- PAST 3 -->
-    <section class="scene" id="past-3" data-world="past">
-      <div class="scene-content story">
-        <h2>Falling in Love Twice</h2>
-        <p>
-          Time passed. Life kept moving.  
-          And then one day, I met you again—different place, different moment, same soul.
-        </p>
-        <p>
-          I didn’t recognize you as the girl from the Beltline.  
-          I just knew that my heart was doing that same thing again—  
-          that quiet, stunned, “oh no, I’m falling” feeling.
-        </p>
-        <p>
-          I fell in love with you for the second time,  
-          without knowing you were the same girl I’d fallen for the first time.
-        </p>
-        <p>
-          That has never happened to me before.  
-          And now, every time I see you, I fall in love with you all over again.
-        </p>
-
-        <button class="btn small-btn" data-next="scene-2">
-          ⬅ Back to Time Choices
-        </button>
-      </div>
-    </section>
-
-    <!-- PRESENT WORLD -->
-    <!-- PRESENT 1 -->
-    <section class="scene" id="present-1" data-world="present">
-      <div class="scene-content story">
-        <h2>Right Here, Right Now</h2>
-        <p>
-          Today, I’m not just thinking about how we met.  
-          I’m thinking about how grateful I am that you’re still here.
-        </p>
-        <p>
-          The girl on skates became the woman I lean on, laugh with, dream with.  
-          You’re not just in my life—you’re the center of it.
-        </p>
-
-        <button class="heart-btn" data-next="present-2">💗 Click to hear the rest…</button>
-      </div>
-    </section>
-
-    <!-- PRESENT 2 -->
-    <section class="scene" id="present-2" data-world="present">
-      <div class="scene-content story">
-        <h2>My Anchor in the Storm</h2>
-        <p>
-          There were moments when everything felt heavy—  
-          when life was loud, confusing, and painful.
-        </p>
-        <p>
-          You were the reason I made it through some of the hardest times in my life.  
-          You didn’t just stand next to me—you held me up.
-        </p>
-        <p>
-          You made the worst days softer.  
-          You made the darkest nights feel survivable.
-        </p>
-
-        <button class="heart-btn" data-next="present-3">💗 Click to hear the rest…</button>
-      </div>
-    </section>
-
-    <!-- PRESENT 3 -->
-    <section class="scene" id="present-3" data-world="present">
-      <div class="scene-content story">
-        <h2>My Angel</h2>
-        <p>
-          You are an angel in my life.  
-          You turned struggle into growth,  
-          loneliness into partnership,  
-          and fear into something I could face with you beside me.
-        </p>
-        <p>
-          I love you more than I can ever fully say.  
-          And I am so, so grateful that I get to love you in this lifetime.
-        </p>
-
-        <button class="btn small-btn" data-next="scene-2">
-          ⬅ Back to Time Choices
-        </button>
-      </div>
-    </section>
-
-    <!-- FUTURE WORLD -->
-    <!-- FUTURE 1 -->
-    <section class="scene" id="future-1" data-world="future">
-      <div class="scene-content story">
-        <h2>Our Land, Our Freedom</h2>
-        <p>
-          When I think about our future, I see land—ours.  
-          I see us waking up where the air is quiet and the sky feels close.
-        </p>
-        <p>
-          I see us traveling wherever and whenever we want,  
-          moving through the world with ease, joy, and freedom.
-        </p>
-        <p>
-          All of it growing from that first moment on the Beltline,  
-          and every moment we’ve shared since.
-        </p>
-
-        <button class="heart-btn" data-next="future-2">💗 Click to hear the rest…</button>
-      </div>
-    </section>
-
-    <!-- FUTURE 2 -->
-    <section class="scene" id="future-2" data-world="future">
-      <div class="scene-content story">
-        <h2>Home in the Woods</h2>
-        <p>
-          I see us living in the woods, comfortably,  
-          surrounded by trees, sky, and quiet.
-        </p>
-        <p>
-          Technology when we want it,  
-          nature when we need it,  
-          and love holding it all together.
-        </p>
-        <p>
-          Spiritual, clean, pure, grounded—  
-          with our ancestors watching over us, proud of what we built.
-        </p>
-
-        <button class="heart-btn" data-next="future-3">💗 Click to hear the rest…</button>
-      </div>
-    </section>
-
-    <!-- FUTURE 3 -->
-    <section class="scene" id="future-3" data-world="future">
-      <div class="scene-content story">
-        <h2>The House I’m Building for You</h2>
-        <p>
-          I’m building you a house—  
-          not just with wood and walls,  
-          but with intention, love, and every lesson we’ve lived.
-        </p>
-        <p>
-          One day we’ll sit on our land,  
-          look back at the Beltline, the present, the storms, the laughter—  
-          and know it was all worth it.
-        </p>
-        <p>
-          Because it led me to you, and kept me with you.  
-          I’m so glad I met you.  
-          I’m so glad I get to love you—  
-          in the past, in the present, and in every future we build.
-        </p>
-
-        <button class="btn small-btn" data-next="scene-2">
-          ⬅ Back to Time Choices
-        </button>
-      </div>
-    </section>
+  <script src="app.js"></script>
+</body>
+</html>
